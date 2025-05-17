@@ -64,6 +64,7 @@ curl --location 'http://localhost:8080/api/matrix' \
 ```bash
 curl --location 'http://localhost:3000/api/matrix/analyze' \
 --header 'Content-Type: application/json' \
+--header 'Authorization: ••••••' \
 --data '{
     "q": [
         [
