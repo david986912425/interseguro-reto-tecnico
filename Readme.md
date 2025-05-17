@@ -1,4 +1,4 @@
-# Reto Técnico Sinapsis - Backend
+# Reto Técnico Interseguro - Backend
 
 ## 🚀 Tecnologías utilizadas
 
@@ -6,13 +6,13 @@
 - Go
 - Express
 
-## 📦 Instalación
+## 1. 📦 Instalación
 
 ```bash
 git clone git@github.com:david986912425/interseguro-reto-tecnico.git
 ```
 
-## 🗝️ Modificar los archivos .env
+## 2. 🗝️ Modificar los archivos .env
 go-backend/.env
 ```bash
 MONGO_URI=mongodb://david:secret@mongo:27017/intersegurodb
@@ -26,7 +26,7 @@ MONGO_URI=mongodb://david:secret@mongo:27017/intersegurodb
 JWT_KEY=jsonwebtoken
 ```
 
-## Construir y levantar los contenedores
+## 3.Construir y levantar los contenedores
 ```bash
 docker-compose up --build
 ```
