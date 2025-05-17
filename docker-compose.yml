@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  mongo:
+    build:
+      context: ./mongodb
+      dockerfile: Dockerfile
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    networks:
+      - backend
+
+  go-backend:
+    build:
+      context: ./go-backend
+      dockerfile: Dockerfile
+    container_name: go-backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongo
+    networks:
+      - backend
+
+  express-backend:
+    build:
+      context: ./express-backend
+      dockerfile: Dockerfile
+    container_name: express-backend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    networks:
+      - backend
+
+volumes:
+  mongo-data:
+
+networks:
+  backend:
